@@ -5,9 +5,18 @@ import {
 } from "react-router-dom";
 import './index.css'
 import router from './Routes/Routes';
+import { HelmetProvider } from 'react-helmet-async';
+import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <RouterProvider router={router}></RouterProvider>
+    <HelmetProvider> 
+      <FirebaseProvider>
+      <RouterProvider router={router}></RouterProvider>
+      </FirebaseProvider>
+    
+      </HelmetProvider>
+ 
+  
  </React.StrictMode>,
 )
