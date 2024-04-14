@@ -2,22 +2,30 @@ import { Link } from "react-router-dom";
 import backgroundImage from '../../assets/austin-distel-wD1LRb9OeEo-unsplash.jpg';
 import { FaEyeSlash} from 'react-icons/fa';
 import { Helmet } from "react-helmet-async";
-import { useContext } from "react";
-import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
+
 import { useForm } from "react-hook-form";
+import UseAuth from "../../hook/UseAuth";
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext);
-  console.log(createUser)
+  const {createUser, updateUserProfile } = UseAuth();
+  // console.log(createUser)
   const {
     register,
     handleSubmit,
-    watch,
+  
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data)
-  }
+    const { email, password, fullName, image } = data;
+    createUser(email, password)
+      .then(() => {
+        return updateUserProfile(fullName, image);
+      })
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => console.log(error));
+  };
     return (
         <div>
           <Helmet><title>Haven - Register</title></Helmet>
@@ -27,14 +35,14 @@ const Register = () => {
   <div className="text-center w-1/2 mt-5 mb-5">
    
     <div className="card shadow-2xl w-full bg-base-100">
-        <h1 className="font-bold text-xl md:text-2xl mt-5 font-raleway text-black">Creat An Account</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-5 font-raleway text-black">Create An Account</h1>
      
       <form className="card-body"  onSubmit={handleSubmit(onSubmit)}>
       <div className="form-control">
           <label className="label">
             <span className="label-text font-raleway text-base md:text-lg font-bold text-black">Name</span>
           </label>
-          <input type="text" {...register("fullName", { required: true })} placeholder="Enter Your Name" 
+          <input type="text"name="fullName" {...register("fullName", { required: true })} placeholder="Enter Your Name" 
           className="input input-bordered border-green-200 bg-gray-50 placeholder:font-raleway placeholder:text-xs  placeholder:md:text-lg placeholder:text-bold placeholder:text-gray-300  "/>
             {errors.fullName&& 
             <span className="text-left text-red-500 mt-1 font-raleway text-xs md:text-base">This field is required</span>}
@@ -43,7 +51,7 @@ const Register = () => {
           <label className="label">
             <span  className="label-text font-raleway text-base md:text-lg font-bold text-black">Email</span>
           </label>
-          <input type="email" placeholder="Enter Your Email"  {...register("email", { required: true })}
+          <input type="email" name="fullName" placeholder="Enter Your Email"  {...register("email", { required: true })}
            className="input input-bordered  border-green-200 bg-gray-50  placeholder:font-raleway  placeholder:text-xs placeholder:md:text-lg placeholder:text-bold placeholder:text-gray-300 
            "  />
              {errors.email&& 
@@ -53,7 +61,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text font-raleway text-base md:text-lg font-bold text-black">Photo Url</span>
           </label>
-          <input type="email" placeholder="Url"{...register("url", { required: true })}
+          <input type="text" placeholder="Url"{...register("image", { required: true })}
            className="input input-bordered border-green-200 bg-gray-50 placeholder:font-raleway  placeholder:text-xs placeholder:md:text-lg placeholder:text-bold placeholder:text-gray-300 " />
          {errors.url&& 
             <span className="text-left text-red-500 mt-1 font-raleway text-xs md:text-base">This field is required</span>}

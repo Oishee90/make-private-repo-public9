@@ -5,7 +5,6 @@ import Login from "../Pages/Navbar/Login";
 import Register from "../Pages/Navbar/Register";
 
 
-
 const router = createBrowserRouter([
     {
       path: "/",
@@ -15,6 +14,7 @@ const router = createBrowserRouter([
           path: "/",
           element: <Home></Home>
         },
+      
         {
             path: "/login",
             element:<Login></Login>
