@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import backgroundImage from '../../assets/austin-distel-wD1LRb9OeEo-unsplash.jpg';
-import { FaEyeSlash} from 'react-icons/fa';
+import {FaEye, FaEyeSlash} from 'react-icons/fa';
 import { Helmet } from "react-helmet-async";
-
+import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import UseAuth from "../../hook/UseAuth";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
 
 const Register = () => {
   const {createUser, updateUserProfile } = UseAuth();
+  const [showpassword, setShowpassword] = useState(false)
+
   // console.log(createUser)
   const {
     register,
@@ -17,12 +22,23 @@ const Register = () => {
   } = useForm();
   const onSubmit = (data) => {
     const { email, password, fullName, image } = data;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    const isPasswordValid = passwordRegex.test(password);
+    if (!isPasswordValid) {
+      // Display toast for invalid password
+      toast.error('Password must have at least 6 characters with an uppercase letter and a lowercase letter.');
+      return;
+    }
+
+
     createUser(email, password)
       .then(() => {
         return updateUserProfile(fullName, image);
       })
       .then(result => {
         console.log(result);
+        toast.success('Account created successfully!');
+        
       })
       .catch(error => console.log(error));
   };
@@ -72,10 +88,16 @@ const Register = () => {
             
           </label>
           
-          <input type="password" placeholder="password" {...register("password", { required: true })}
+          <input 
+          type = {showpassword ? "text" : "password"}
+          placeholder="password" {...register("password", { required: true })}
           className=" input input-bordered border-green-200 bg-gray-50  placeholder:font-raleway  placeholder:text-xs placeholder:md:text-lg placeholder:text-bold placeholder:text-gray-300 "  />
-       <p className="absolute top-[66%] left-[82%] md:left-[94%]"><FaEyeSlash className="h-[100%]" /></p>
-          
+       <p onClick={() => setShowpassword(!showpassword)} className="absolute top-[66%] left-[82%] md:left-[94%]">
+        {
+          showpassword ? <FaEyeSlash className="h-[100%]" /> :<FaEye className="h-[100%]" ></FaEye>
+     
+        }
+        </p>   
        {errors.password&& 
             <span className="text-left text-red-500 mt-1 font-raleway text-xs md:text-base">This field is required</span>}
         </div>
@@ -87,7 +109,7 @@ const Register = () => {
         <p className="text-left font-raleway text-xs md:text-lg font-bold text-black">Already Have An Account? <Link to={'/login'} className="text-[#1B6B93]">Login Here</Link></p>
         </div>
       </form>
-      
+      <ToastContainer/>
     </div>
   </div>
 </div>

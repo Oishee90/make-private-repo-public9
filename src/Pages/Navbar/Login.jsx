@@ -1,12 +1,17 @@
 import backgroundImage from '../../assets/austin-distel-wD1LRb9OeEo-unsplash.jpg';
 import { Link } from "react-router-dom";
-import { FaEyeSlash} from 'react-icons/fa';
+import { FaEye,FaEyeSlash} from 'react-icons/fa';
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import SocialLogIn from './SocialLogIn';
 import UseAuth from '../../hook/UseAuth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from 'react';
 const Login = () => {
   const {signInUser} = UseAuth()
+  const [showpassword, setShowpassword] = useState(false)
+
   const {
     register,
     handleSubmit,
@@ -21,7 +26,9 @@ const Login = () => {
    .then(result => {
     console.log(result.user)
    })
-   .catch(error => console.log(error))
+   .catch( error => {
+    toast.error('Invalid email or password.');
+   })
   }
     return (
   
@@ -56,9 +63,16 @@ const Login = () => {
          
        </label>
        
-       <input type="password" placeholder="password" {...register("password", { required: true })}
-       className=" input input-bordered border-green-200 bg-gray-50  placeholder:font-raleway  placeholder:text-xs placeholder:md:text-lg placeholder:text-bold placeholder:text-gray-300 " />
-    <p className="absolute top-[66%] left-[82%] md:left-[94%]"><FaEyeSlash className="h-[100%]" /></p>
+       <input 
+          type = {showpassword ? "text" : "password"}
+          placeholder="password" {...register("password", { required: true })}
+          className=" input input-bordered border-green-200 bg-gray-50  placeholder:font-raleway  placeholder:text-xs placeholder:md:text-lg placeholder:text-bold placeholder:text-gray-300 "  />
+       <p onClick={() => setShowpassword(!showpassword)} className="absolute top-[66%] left-[82%] md:left-[94%]">
+        {
+          showpassword ? <FaEyeSlash className="h-[100%]" /> :<FaEye className="h-[100%]" ></FaEye>
+     
+        }
+        </p>   
     {errors.password&& 
          <span className="text-left text-red-500 mt-1 font-raleway text-xs md:text-base">This field is required</span>}
   
@@ -68,6 +82,7 @@ const Login = () => {
  <div className="form-control mt-6">
    <button className="btn bg-[#1B6B93] hover:bg-green-900 font-raleway text-xs md:text-lg font-bold text-white">Log In</button>
  </div>
+ <ToastContainer  />
  <div className="form-control mt-6">
  <p className="text-left font-raleway text-xs md:text-lg font-bold text-black">Do You Have An Account? Please <Link to={'/register'} className="text-green-500">Register</Link></p>
  </div>
