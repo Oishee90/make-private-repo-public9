@@ -23,7 +23,7 @@ const Navbar = () => {
      {navlinks}
       </ul>
     </div>
-    <a className="btn btn-ghost  font-raleway font-bold text-[#03070C] md:text-3xl text-xl lg:text-4xl">Haven Heights</a>
+    <a className="btn btn-ghost  font-raleway font-bold text-[#03070C] md:text-3xl text-xl lg:text-4xl">SkyVista</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Spacious Single-Family Home",
+    "segment_name": "Single-Family Homes",
+    "description": "Welcome to your dream home! This spacious single-family home offers everything you need for comfortable family living. With four bedrooms, three bathrooms, and an expansive backyard, there's plenty of room for everyone to enjoy. The open-concept layout is perfect for entertaining guests, while the quiet suburban neighborhood provides a peaceful retreat from the hustle and bustle of city life. Don't miss out on the opportunity to make this house your forever home!",
+    "price": "$550,000",
+    "status": "sale",
+    "area": "3500 sq ft",
+    "location": "Suburban Neighborhood, USA",
+    "facilities": ["4 bedrooms", "3 bathrooms", "backyard", "garage"],
+    "image": "single_family_home.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 2,
+    "estate_title": "Cozy Townhouse in Quaint Community",
+    "segment_name": "Townhouses",
+    "description": "Step into this charming townhouse and experience true comfort and coziness. Located in a quaint community, this home offers a peaceful retreat from the hustle and bustle of city life. With three bedrooms, two and a half bathrooms, and a private patio, there's plenty of space to relax and unwind. The historic town is filled with character and charm, making it the perfect place to call home. Don't wait, schedule a viewing today!",
+    "price": "$400,000",
+    "status": "sale",
+    "area": "2000 sq ft",
+    "location": "Historic Town, USA",
+    "facilities": ["3 bedrooms", "2.5 bathrooms", "patio", "garage"],
+    "image": "townhouse.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 3,
+    "estate_title": "Modern Apartment with City Views",
+    "segment_name": "Apartments",
+    "description": "Welcome to urban living at its finest! This modern apartment offers breathtaking views of the city skyline and all the amenities you could ever need. With one bedroom, one bathroom, and a private balcony, this stylish apartment is perfect for young professionals or couples looking for a vibrant city lifestyle. Located in the heart of downtown, you'll be just steps away from trendy restaurants, shops, and entertainment venues. Don't miss out on the opportunity to live in luxury!",
+    "price": "$2,000/month",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "Downtown, USA",
+    "facilities": ["1 bedroom", "1 bathroom", "balcony", "gym", "rooftop terrace"],
+    "image": "modern_apartment.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 4,
+    "estate_title": "Inviting Student Housing",
+    "segment_name": "Student Housing",
+    "description": "Welcome to your home away from home! Our student housing community offers comfortable and convenient living spaces for students. With fully furnished apartments, on-site amenities, and a supportive community, you'll have everything you need to succeed academically and socially. Located near campus, you'll be just minutes away from classes, libraries, and campus events. Join our vibrant student community today!",
+    "price": "$700/month",
+    "status": "rent",
+    "area": "Varies",
+    "location": "University Campus, USA",
+    "facilities": ["Furnished apartments", "Fitness center", "Study lounges", "Community events"],
+    "image": "student_housing.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 5,
+    "estate_title": "Secluded Mountain Retreat",
+    "segment_name": "Vacation Rentals",
+    "description": "Escape to this secluded mountain retreat and experience the beauty of nature. Tucked away in the heart of the mountains, this charming cabin offers breathtaking views and all the comforts of home. With three bedrooms, two bathrooms, and a cozy fireplace, you'll feel right at home in this peaceful oasis. Whether you're seeking adventure or relaxation, this mountain retreat has it all. Book your stay today and make memories that will last a lifetime!",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "1800 sq ft",
+    "location": "Mountain Retreat, USA",
+    "facilities": ["3 bedrooms", "2 bathrooms", "fireplace", "deck"],
+    "image": "mountain_retreat.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 6,
+    "estate_title": "Luxury Condo with Ocean Views",
+    "segment_name": "Condos",
+    "description": "Indulge in luxury living with this stunning oceanfront condo. Located in a prestigious building, this spacious condo offers panoramic views of the ocean and all the amenities you could ever want. With two bedrooms, two bathrooms, and a private balcony, this condo is perfect for those seeking a sophisticated coastal lifestyle. Enjoy resort-style amenities, including a pool, fitness center, and concierge service. Don't miss out on the opportunity to live in paradise!",
+    "price": "$1,200,000",
+    "status": "sale",
+    "area": "2000 sq ft",
+    "location": "Oceanfront, USA",
+    "facilities": ["2 bedrooms", "2 bathrooms", "balcony", "pool", "fitness center", "concierge"],
+    "image": "oceanfront_condo.jpg",
+    "button_text": "View Property"
+  }
+]

@@ -7,6 +7,8 @@ export const AuthContext = createContext(null)
 
 const FirebaseProvider = ({children}) => {
     const [user, setUser] = useState(null)
+    
+
     // social Auth providers
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
