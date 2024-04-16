@@ -19,10 +19,7 @@ const Home = () => {
         <div className="container-mx-auto">
  <Helmet><title>SkyVista-Home</title></Helmet>
          <Banner></Banner>
-         <div className="mt-14" data-aos="fade-up">
-           <h1 className="text-center mx-auto font-raleway text-[#135D66] font-bold text-5xl">Explore Our State</h1> 
-           <p className="font-raleway mt-5 text-gray-600 text-lg mx-auto pr-10 pl-10 text-center">From spacious single-family homes to cozy townhouses, modern apartments, student housing, vacation rentals, and luxury condos, our diverse collection has something for everyone.</p>
-        </div>
+         
            <Estate></Estate>
             
         </div>

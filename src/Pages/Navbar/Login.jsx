@@ -8,6 +8,7 @@ import UseAuth from '../../hook/UseAuth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
+import { useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
   const {signInUser} = UseAuth()
   const [showpassword, setShowpassword] = useState(false)
@@ -18,14 +19,23 @@ const Login = () => {
   
     formState: { errors },
   } = useForm();
+ // navigation system
+ const navigate = useNavigate()
+ const location = useLocation()
+ const form = location?.state ||"/";
+
+
+
   const onSubmit = data  => {
    
     // console.log(data)
    const {email,password} = data;
    signInUser(email,password)
-   .then(result => {
-    console.log(result.user)
-   })
+   .then (result => {
+    if(result.user){
+     navigate(form)
+    }
+  })
    .catch( error => {
     toast.error('Invalid email or password.');
    })

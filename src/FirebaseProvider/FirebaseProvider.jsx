@@ -6,9 +6,9 @@ import auth from "../Firebase/firebase.config";
 export const AuthContext = createContext(null)
 
 const FirebaseProvider = ({children}) => {
-    const [user, setUser] = useState(null)
-    
-
+    const [user, setUser] = useState(null);
+    const [loading,setLoading] = useState(true);
+console.log(loading)
     // social Auth providers
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -16,6 +16,7 @@ const FirebaseProvider = ({children}) => {
     console.log(user)
     // create user
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     // update user
@@ -29,32 +30,45 @@ const FirebaseProvider = ({children}) => {
    
     // sighn in
     const signInUser = (email,password) =>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
     // google log in
     const googleLogIn = () => {
+        setLoading(true)
         return signInWithPopup(auth,googleProvider)
     }
     // github log in
     const githubLogIn = () => {
+        setLoading(true)
         return signInWithPopup(auth,githubProvider )
     }
     // logout
     const logOut = () => {
+        
         setUser(null)
         signOut(auth)
     }
     // observer
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe= onAuthStateChanged(auth, (user) => {
             if(user)
             {
         setUser(user)
+        setLoading(false)
             }
-        })
+        });
+        return () => unsubscribe();
     },[])
 
-const allvalues = {createUser,updateUserProfile , signInUser, googleLogIn, githubLogIn,logOut,user }
+const allvalues = {createUser,
+    updateUserProfile , 
+    signInUser, 
+    googleLogIn, 
+    githubLogIn,
+    logOut,
+    user ,
+    loading}
     return (
         <AuthContext.Provider value={allvalues}>
                {children} 

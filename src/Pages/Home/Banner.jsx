@@ -11,6 +11,7 @@
  import banner1 from "../../assets/daniel-barnes-RKdLlTyjm5g-unsplash.jpg"
  import banner2 from "../../assets/banner1.jpg"
  import banner3 from "../../assets/lycs-architecture-kUdbEEMcRwE-unsplash (1).jpg"
+import { Link } from 'react-router-dom';
  
 const Banner = () => {
  
@@ -36,10 +37,10 @@ const Banner = () => {
             <img src={banner1} alt="" className="h-[450px] w-full object-cover  rounded-lg" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black rounded-lg"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-    <h1 className="text-5xl font-extrabold font-raleway mb-4 animate__animated animate__backInLeft">Welcome to SkyVista</h1>
+    <h1 className=" text-3xl lg:text-5xl font-extrabold font-raleway mb-4 animate__animated animate__backInLeft">Welcome to SkyVista</h1>
 
     <p className="text-lg text-gray-300  mt-5 mb-8 animate__animated animate__backInRight">Where comfort meets luxury.Explore our curated collection of dream homes designed to elevate your lifestyle. Find your bliss today</p>
-    <a href="#" className="inline-block px-6 py-3 bg-[#135D66] text-white font-semibold rounded-full shadow-lg hover:bg-[#386167] transition duration-300">Explore Now</a>
+    <Link to={"/estate"} className="inline-block px-6 py-3 bg-[#135D66] text-white font-semibold rounded-full shadow-lg hover:bg-[#386167] transition duration-300"> Explore now</Link>
   </div>
           </div>
         </SwiperSlide>
@@ -52,7 +53,7 @@ const Banner = () => {
     <h1 className="text-4xl font-extrabold font-raleway mb-4 ">Discover Your Urban Sanctuary </h1>
 
     <p className="text-lg text-gray-300 mt-5 mb-8">Experience the epitome of modern urban living in our luxurious apartments.  Discover your urban oasis today</p>
-    <a href="#" className="inline-block px-6 py-3 bg-[#135D66] text-white font-semibold rounded-full shadow-lg hover:bg-[#386167] transition duration-300">Explore Now</a>
+    <Link to={"/estate"} className="inline-block px-6 py-3 bg-[#135D66] text-white font-semibold rounded-full shadow-lg hover:bg-[#386167] transition duration-300"> Explore now</Link>
   </div>
           </div>
         </SwiperSlide>
@@ -64,7 +65,7 @@ const Banner = () => {
     <h1 className="text-4xl mt-5 font-extrabold font-raleway mb-4 ">Find Your Forever Family Home </h1>
 
     <p className="text-lg  text-gray-300 mt-8 mb-8">Our family sanctuaries provide a haven of peace and serenity, where every corner is filled with love and laughter. Begin your familys next chapter with us.</p>
-    <a href="#" className="inline-block px-6 py-3 bg-[#135D66] text-white font-semibold rounded-full shadow-lg hover:bg-[#386167] transition duration-300">Explore Now</a>
+ <Link to={"/estate"} className="inline-block px-6 py-3 bg-[#135D66] text-white font-semibold rounded-full shadow-lg hover:bg-[#386167] transition duration-300"> Explore now</Link>
   </div>
           </div>
             </SwiperSlide>

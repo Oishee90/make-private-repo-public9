@@ -8,6 +8,7 @@ import UseAuth from "../../hook/UseAuth";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const {createUser, updateUserProfile } = UseAuth();
@@ -20,6 +21,12 @@ const Register = () => {
   
     formState: { errors },
   } = useForm();
+
+  // navigation system
+  const navigate = useNavigate()
+  const location = useLocation()
+  const form = location?.state ||"/";
+
   const onSubmit = (data) => {
     const { email, password, fullName, image } = data;
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -35,11 +42,13 @@ const Register = () => {
       .then(() => {
         return updateUserProfile(fullName, image);
       })
-      .then(result => {
-        console.log(result);
-        toast.success('Account created successfully!');
-        
+      .then (result => {
+        if(result.user){
+         navigate(form)
+         toast.success('Account created successfully!');
+        }
       })
+    
       .catch(error => console.log(error));
   };
     return (
