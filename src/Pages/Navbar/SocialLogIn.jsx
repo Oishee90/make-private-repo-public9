@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../../hook/UseAuth";
 import {  toast } from 'react-toastify';
+import { FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const SocialLogIn = () => {
     const {googleLogIn, githubLogIn} = UseAuth()
@@ -27,8 +29,8 @@ const SocialLogIn = () => {
         </div>
          <div className=" mt-6">
          <div className='flex items-center justify-center gap-6'>
-           <div onClick={() => handleSocialLogin(googleLogIn)} className='btn btn-primary md:text-base  text-xs font-raleway font-bold'>Google</div>
-           <div onClick={() => handleSocialLogin(githubLogIn)} className='btn btn-primary md:text-base  text-xs font-raleway font-bold' >Github</div>
+           <div onClick={() => handleSocialLogin(googleLogIn)} className='btn border-blue-950 hover:bg-blue-950 hover:text-white md:text-base  text-xs font-raleway font-bold'> <FaGoogle /> Google</div>
+           <div onClick={() => handleSocialLogin(githubLogIn)} className='btn border-blue-950 hover:bg-blue-950 hover:text-white md:text-base   text-xs font-raleway font-bold' > <FaGithub />Github</div>
          </div>
          </div>
          </div>
