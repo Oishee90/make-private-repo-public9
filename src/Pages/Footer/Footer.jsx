@@ -26,7 +26,7 @@ const Footer = () => {
     </div>
   </nav> 
   <aside>
-    <p className='text-white'>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+    <p className='text-white'>Copyright © 2024 - All right reserved by SkyVista</p>
   </aside>
 </footer>
         </div>

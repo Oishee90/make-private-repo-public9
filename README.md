@@ -25,8 +25,6 @@ Sky Vista is a responsive real estate project built using React, offering a uniq
 ## Contributing
 Contributions are welcome! Feel free to fork the repository, make your changes, and submit a pull request.
 
-## License
-This project is licensed under the [MIT License](link-to-license-file).
 
-## Author
-[Your Name/Username](link-to-your-profile)
+## Website
+[Link to the Sky Vista website](https://residential-web-project.web.app)

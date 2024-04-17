@@ -9,6 +9,9 @@ const Navbar = () => {
       <li className="font-raleway text-[#03070CB3] text-xs lg:text-lg ml-5" id="sidebar"><NavLink to={"/"}>Home</NavLink></li>
       <li className="font-raleway text-[#03070CB3] text-xs lg:text-lg ml-5" id="sidebar"><NavLink to={"/about"}>About</NavLink></li>
       <li className="font-raleway text-[#03070CB3] text-xs lg:text-lg ml-5" id="sidebar" ><NavLink to={"/contact"}>Contact us</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar">
+      <NavLink to={"/updateProfile"}>Update Profile</NavLink>
+    </li>
       {user && (
   <div className="flex items-center">
     <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar">
