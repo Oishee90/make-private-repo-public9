@@ -6,14 +6,24 @@ import UseAuth from "../../hook/UseAuth";
 const Navbar = () => {
   const {logOut,user} = UseAuth()
     const navlinks = <>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar"><NavLink to={"/"}>Home</NavLink></li>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar"><NavLink to={"/about"}>About</NavLink></li>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar" ><NavLink to={"/contact"}>Contact us</NavLink></li>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar"><NavLink to={"/updateProfile"}>Contact us</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-xs lg:text-lg ml-5" id="sidebar"><NavLink to={"/"}>Home</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-xs lg:text-lg ml-5" id="sidebar"><NavLink to={"/about"}>About</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-xs lg:text-lg ml-5" id="sidebar" ><NavLink to={"/contact"}>Contact us</NavLink></li>
+      {user && (
+  <div className="flex items-center">
+    <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar">
+      <NavLink to={"/updateProfile"}>Update Profile</NavLink>
+    </li>
+    <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar">
+      <NavLink to={"/blog"}>Blog</NavLink>
+    </li>
+  </div>
+)}
+      
     </>
     return (
-        <div >
-        <div className="navbar bg-base-100">
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 1000 }} >
+        <div className="navbar bg-base-100 mb-5">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

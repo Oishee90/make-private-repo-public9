@@ -22,7 +22,8 @@ const Login = () => {
  // navigation system
  const navigate = useNavigate()
  const location = useLocation()
- const form = location?.state ||"/";
+ console.log(location)
+ const form = location?.state || "/";
 
 
 
@@ -44,7 +45,7 @@ const Login = () => {
   }
     return (
   
-        <div>
+        <div className='mt-20'>
           <Helmet><title>Haven - Login</title></Helmet>
         <div className="hero min-h-screen rounded-xl" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImage})` ,
      backgroundSize: 'cover',

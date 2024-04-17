@@ -1,6 +1,6 @@
 import about from "../../assets/blake-wisz-GFrBMipOd_E-unsplash.jpg"
 import { CiCircleCheck } from "react-icons/ci";
-
+import { Helmet } from "react-helmet-async";
 
 import { FaBuildingWheat } from "react-icons/fa6";
 import { GiFamilyHouse } from "react-icons/gi";
@@ -8,7 +8,8 @@ import { FaSchool } from "react-icons/fa6";
 const About = () => {
     
     return (
-        <div className="container mx-auto ">
+        <div className="container mx-auto  mt-10 ">
+          <Helmet><title>SkyVista-About</title></Helmet>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10  mt-6 mb-20 items-start container mx-auto">
   <div className="rounded-2xl relative h-full ">
 
@@ -49,7 +50,7 @@ Experts Forecasts And Insights Expected Trends</h1>
       {/* swipper */}
       <div className="mx-auto mt-10"><h1 className="text-center mb-8 font-garamond font-bold text-blue-600 text-5xl ">Our Services</h1></div>
       <div className="grid grid-cols-1  md:grid-cols-3 gap-5">
-      <div className="card bg-base-100 border-blue-300 shadow-xl">
+      <div className="card  bg-[#e4edf1] hover:bg-white border-blue-300 shadow-xl">
   <div className="card-body">
     <FaBuildingWheat className=" card-title w-[3rem] text-blue-900 h-20" />
     <p className="text-4xl font-garamond text-black font-bold">Appertments</p>
@@ -59,7 +60,7 @@ Experts Forecasts And Insights Expected Trends</h1>
     </div>
   </div>
 </div>
-<div className="card bg-base-100 rounded-xl  shadow-2xl">
+<div className="card bg-[#e4edf1] hover:bg-white rounded-xl  shadow-2xl">
   <div className="card-body">
     < GiFamilyHouse className=" card-title w-[3rem] text-blue-900 h-20" />
     <p className="text-4xl font-garamond text-black font-bold">Familly House</p>
@@ -70,7 +71,7 @@ Experts Forecasts And Insights Expected Trends</h1>
   </div>
 </div>
 
-<div className="card bg-base-100 shadow-xl">
+<div className="card bg-[#e4edf1] hover:bg-white shadow-xl">
   <div className="card-body">
     <FaSchool className=" card-title w-[3rem] text-blue-900 h-20" />
     <p className="text-4xl font-garamond text-black font-bold">School</p>

@@ -55,8 +55,8 @@ const Register = () => {
       .catch(() =>  toast.error('This account already register'));
   };
     return (
-        <div>
-          <Helmet><title>Haven - Register</title></Helmet>
+        <div className="mt-20">
+          <Helmet><title>SkyVista - Register</title></Helmet>
             <div className="hero min-h-screen rounded-xl" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImage})` ,
          backgroundSize: 'cover',
          backgroundPosition: 'center',  }}>

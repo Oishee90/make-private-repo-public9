@@ -16,7 +16,7 @@ const Home = () => {
     }, [])
     
     return (
-        <div className="container-mx-auto">
+        <div className="container-mx-auto mt-20">
  <Helmet><title>SkyVista-Home</title></Helmet>
          <Banner></Banner>
          

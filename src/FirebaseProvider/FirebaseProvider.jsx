@@ -45,7 +45,7 @@ console.log(loading)
     }
     // logout
     const logOut = () => {
-        setLoading(true)
+       
         setUser(null)
         signOut(auth)
     }

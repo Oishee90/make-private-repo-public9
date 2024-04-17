@@ -14,11 +14,7 @@ const Footer = () => {
     return (
         <div className="mt-10 container mx-auto "  data-aos="fade-up">
           <footer className="footer footer-center p-10 bg-black text-base-content rounded">
-  <nav className="grid grid-flow-col gap-4">
-    <a className="text-white">About us</a>
-    <a className="link link-hover text-white">Contact</a>
- 
-  </nav> 
+  
   <nav>
     <div className="grid grid-flow-col gap-4">
       <a href='https://twitter.com/'><FaXTwitter className="fill-current w-[24px] h-[24px] text-white" /></a>
