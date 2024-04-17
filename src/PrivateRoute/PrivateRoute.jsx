@@ -10,15 +10,16 @@ const PrivateRoute = ({children}) => {
     if(loading){
         return <div className="w-1/2"><span className="loading loading-spinner text-info"></span></div>
     }
-    console.log('hi');
-    if(!user){
-        return  <Navigate to='/login' state={location?.pathname || '/'}/>
+    // console.log('hi');
+    // if(!user){
+    //     return  <Navigate to='/login' state={location?.pathname || '/'}/>
+    // }
+    if(user){
+        return children
     }
    
     return (
-        <div>
-           {children}
-        </div>
+        <Navigate state={location.pathname} to="/login"></Navigate>
     );
 };
 

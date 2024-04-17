@@ -51,12 +51,11 @@ console.log(loading)
     }
     // observer
     useEffect(() => {
-        const unsubscribe= onAuthStateChanged(auth, (user) => {
-            if(user)
-            {
-        setUser(user)
+        const unsubscribe= onAuthStateChanged(auth, currentUser => {
+           
+        setUser(currentUser)
         setLoading(false)
-            }
+            
         });
         return () => unsubscribe();
     },[])

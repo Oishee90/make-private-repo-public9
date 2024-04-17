@@ -20,10 +20,12 @@ const Login = () => {
     formState: { errors },
   } = useForm();
  // navigation system
- const navigate = useNavigate()
  const location = useLocation()
  console.log(location)
- const form = location?.state || "/";
+ const navigate = useNavigate()
+
+ 
+ const form = location?.state? location.state : "/";
 
 
 
