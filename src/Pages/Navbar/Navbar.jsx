@@ -9,7 +9,7 @@ const Navbar = () => {
       <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/"}>Home</NavLink></li>
       <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/about"}>About</NavLink></li>
       <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/about"}>Contact us</NavLink></li>
-    
+      <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/updateProfile"}>Contact us</NavLink></li>
     </>
     return (
         <div >
@@ -33,9 +33,9 @@ const Navbar = () => {
   <div className="navbar-end">
     {
       user? <div className="flex items-center gap-5">
-    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar hover:tooltip hover:tooltip-open hover:tooltip-bottom" data-tip={user.displayName}>
+    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar hover:tooltip hover:tooltip-open hover:tooltip-bottom" data-tip={user?.displayName||'user name not found'}>
         <div className="w-15 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+          <img alt="Tailwind CSS Navbar component" src={user?.photoURL || "https://i.ibb.co/BcWRPHQ/derek-lee-93-L-Ph-OWPk-Y-unsplash.jpg"} />
         </div>
       </div>
       <div onClick={logOut}  className="btn hover:bg-[#003C43] text-xs md:text-xl text-bold bg-[#135D66] text-white ">LogOut</div>

@@ -11,10 +11,10 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const {createUser, updateUserProfile } = UseAuth();
+  const {createUser, updateUserProfile,user  } = UseAuth();
   const [showpassword, setShowpassword] = useState(false)
 
-  // console.log(createUser)
+  console.log(user)
   const {
     register,
     handleSubmit,
@@ -39,17 +39,20 @@ const Register = () => {
 
 
     createUser(email, password)
-      .then(() => {
-        return updateUserProfile(fullName, image);
-      })
-      .then (result => {
-        if(result.user){
-         navigate(form)
-         toast.success('Account created successfully!');
-        }
+      
+      .then (() => {
+        toast.success('Account created successfully!');
+        updateUserProfile(fullName,image)
+        .then(() => {
+          
+            navigate(form)
+           
+           
+        })
+        
       })
     
-      .catch(error => console.log(error));
+      .catch(() =>  toast.error('This account already register'));
   };
     return (
         <div>

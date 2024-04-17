@@ -16,13 +16,13 @@ console.log(loading)
     console.log(user)
     // create user
     const createUser = (email, password) => {
-        setLoading(true)
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
     // update user
     const updateUserProfile = (name,image) => {
     
-        updateProfile(auth.currentUser, {
+        return updateProfile(auth.currentUser, {
             displayName: name,
              photoURL: image
           })
@@ -45,7 +45,7 @@ console.log(loading)
     }
     // logout
     const logOut = () => {
-        
+        setLoading(true)
         setUser(null)
         signOut(auth)
     }

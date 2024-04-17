@@ -10,7 +10,8 @@
     "location": "Suburban Neighborhood, USA",
     "facilities": ["4 bedrooms", "3 bathrooms", "backyard", "garage"],
     "image": "https://i.ibb.co/dbDbSCZ/gustavo-zambelli-n-Evz-SXBIhi-U-unsplash.jpg",
-    "button_text": "View Property"
+    "button_text": "View Property",
+    "banner_image":"https://i.ibb.co/BcWRPHQ/derek-lee-93-L-Ph-OWPk-Y-unsplash.jpg"
   },
   {
     "id": 2,
@@ -23,6 +24,7 @@
     "location": "Historic Town, USA",
     "facilities": ["3 bedrooms", "2.5 bathrooms", "patio", "garage"],
     "image": "https://i.ibb.co/zxGxqjP/Winners.jpg",
+    "banner_image":"https://i.ibb.co/BcWRPHQ/derek-lee-93-L-Ph-OWPk-Y-unsplash.jpg",
     "button_text": "View Property"
   },
   {
@@ -36,7 +38,8 @@
     "location": "Downtown, USA",
     "facilities": ["1 bedroom", "1 bathroom", "balcony", "gym", "rooftop terrace"],
     "image": "https://i.ibb.co/txxPVJM/City-View-Lofts-Axiom-Architecture.jpg",
-    "button_text": "View Property"
+    "button_text": "View Property",
+    "banner_image":"https://i.ibb.co/BcWRPHQ/derek-lee-93-L-Ph-OWPk-Y-unsplash.jpg"
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "location": "University Campus, USA",
     "facilities": ["Furnished apartments", "Fitness center", "Study lounges", "Community events"],
     "image": "https://i.ibb.co/BKhVkFT/BMK-BAAN-MAI-KHAO-se-ARCHOFFICE.jpg",
-    "button_text": "View Property"
+    "button_text": "View Property",
+    "banner_image":"https://i.ibb.co/BcWRPHQ/derek-lee-93-L-Ph-OWPk-Y-unsplash.jpg"
   },
   {
     "id": 5,
@@ -62,7 +66,8 @@
     "location": "Mountain Retreat, USA",
     "facilities": ["3 bedrooms", "2 bathrooms", "fireplace", "deck"],
     "image": "https://i.ibb.co/FwnXvdZ/Parktown-North.jpg",
-    "button_text": "View Property"
+    "button_text": "View Property",
+    "banner_image":"https://i.ibb.co/BcWRPHQ/derek-lee-93-L-Ph-OWPk-Y-unsplash.jpg"
   },
   {
     "id": 6,
@@ -75,6 +80,7 @@
     "location": "Oceanfront, USA",
     "facilities": ["2 bedrooms", "2 bathrooms", "balcony", "pool", "fitness center", "concierge"],
     "image": "https://i.ibb.co/RzZZddH/Gallery-of-OMA-Foster-Partners-Heatherwick-Studio-Recruited-to-Design-Faena-District-of-Miami-Beach.jpg",
-    "button_text": "View Property"
+    "button_text": "View Property",
+    "banner_image":"https://i.ibb.co/BcWRPHQ/derek-lee-93-L-Ph-OWPk-Y-unsplash.jpg"
   }
 ]

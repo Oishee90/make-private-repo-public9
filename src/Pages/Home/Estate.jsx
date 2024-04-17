@@ -37,7 +37,7 @@ const Estate = ({estate}) => {
         <div id='estate' className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-7 gap-8'>
             {
                 categories.map((category, index) => (
-<div key={index} className="card bg-base-100 shadow-2xl " data-aos="fade-up">
+<div key={index} className="card bg-[#e4edf1] hover:bg-white shadow-2xl " data-aos="fade-up">
     <div className="relative" >
     <figure className="h-64 overflow-hidden">
     <img  data-aos="fade-zoom-in" src={category.image} className="object-cover rounded-t-lg w-full h-full"  />
@@ -47,7 +47,7 @@ const Estate = ({estate}) => {
   
   
   <div className="card-body">
-    <h2 className="card-title font-extrabold font-raleway text-lg  md:text-2xl ">
+    <h2 className="card-title font-extrabold font-raleway text-lg  md:text-2xl hover:text-[#135D66] ">
     {category.segment_name}
     <div className={`badge border-none text-white p-2 font-raleway ${category.status === 'Rent' ? 'bg-green-500' : 'bg-red-500'}`}>{category.status}</div>
     </h2>

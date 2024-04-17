@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../../hook/UseAuth";
-
+import {  toast } from 'react-toastify';
 
 const SocialLogIn = () => {
     const {googleLogIn, githubLogIn} = UseAuth()
@@ -10,6 +10,7 @@ const SocialLogIn = () => {
     const handleSocialLogin = socialProvider => {
       socialProvider()
       .then (result => {
+        toast.success('Log in successfully!');
         if(result.user){
          navigate(form)
         }

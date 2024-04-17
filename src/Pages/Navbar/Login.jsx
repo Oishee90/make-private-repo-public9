@@ -32,11 +32,13 @@ const Login = () => {
    const {email,password} = data;
    signInUser(email,password)
    .then (result => {
+   
     if(result.user){
+      toast.success('Log in successfully!');
      navigate(form)
     }
   })
-   .catch( error => {
+   .catch( () => {
     toast.error('Invalid email or password.');
    })
   }
