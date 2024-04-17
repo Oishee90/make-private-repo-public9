@@ -8,6 +8,7 @@ import EstateDetails from "../Pages/Home/EstateDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UpdateProfilePage from "../Pages/Navbar/UpdateProfuile";
 import ErrorPages from "../Pages/ErrorPage/ErrorPage";
+import About from "../Pages/About/About";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     <UpdateProfilePage></UpdateProfilePage>
           </PrivateRoute>,
        
+      },
+      {
+        path: "/about",
+        element:<About></About>
       },
         {
             path: "/login",

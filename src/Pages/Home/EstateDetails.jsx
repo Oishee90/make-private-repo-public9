@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect,  } from 'react';
 import 'animate.css';
+import { Helmet } from 'react-helmet-async';
 
 const EstateDetails = () => {
     const categories = useLoaderData()
@@ -29,6 +30,7 @@ const EstateDetails = () => {
   }, [])
     return (
         <div className='container mx-auto'>
+          <Helmet><title>SkyVista-Estate-details</title></Helmet>
            <div className="hero relative h-screen   rounded-xl" style={backgroundImageStyle} data-aos="fade-right" >
            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#03070CB3] rounded-xl"></div>
     

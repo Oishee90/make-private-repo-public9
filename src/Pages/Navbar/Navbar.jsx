@@ -6,10 +6,10 @@ import UseAuth from "../../hook/UseAuth";
 const Navbar = () => {
   const {logOut,user} = UseAuth()
     const navlinks = <>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/"}>Home</NavLink></li>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/about"}>About</NavLink></li>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/about"}>Contact us</NavLink></li>
-      <li className="font-raleway text-[#03070CB3] text-lg ml-5"><NavLink to={"/updateProfile"}>Contact us</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar"><NavLink to={"/"}>Home</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar"><NavLink to={"/about"}>About</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar" ><NavLink to={"/contact"}>Contact us</NavLink></li>
+      <li className="font-raleway text-[#03070CB3] text-lg ml-5" id="sidebar"><NavLink to={"/updateProfile"}>Contact us</NavLink></li>
     </>
     return (
         <div >
