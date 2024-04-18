@@ -13,7 +13,7 @@ const ContactUs = () => {
     return (
         <div>
            <Helmet><title>SkyVista-Contact Us</title></Helmet>
-             <div className="container mx-auto mt-7 " >
+             <div className="container mx-auto mt-20 " >
 
            <div className="hero rounded-2xl border  flex-col lg:flex-row min-h-screen  relative " style={backgroundImageStyle}>
            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#03070CB3] rounded-xl" ></div>
